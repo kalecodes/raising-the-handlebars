@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const {} = require('../models')
 // Import custom middleware
-const withAuth = require('../utils/auth');
+// const withAuth = require('../utils/auth');
 
 // get limited amount of events (no auth require)
 
