@@ -10,7 +10,7 @@ const seedAll = async () => {
 
     await seedEvents();
 
-    await seedTags
+    await seedTags();
 
     process.exit(0);
 };
