@@ -37,14 +37,14 @@ Event.belongsTo(User, {
 
 Tag.belongsToMany(Event, {
   through: EventTags,
-  as: 'tagged_events',
+  as: 'tags',
   foreignKey: 'tag_id',
   onDelete: 'SET NULL'
 })
 
 Event.belongsToMany(Tag, {
   through: EventTags,
-  as: 'tagged_events',
+  as: 'tags',
   foreignKey: 'event_id',
   onDelete: 'SET NULL'
 })
