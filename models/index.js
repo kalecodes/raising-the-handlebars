@@ -3,6 +3,7 @@ const User = require("./User");
 const Event = require("./Event");
 // const Comment = require("./Comment");
 const Tag = require("./Tag");
+const EventTags = require("./EventTags")
 
 // Create associations
 User.hasMany(Event, {
@@ -33,15 +34,22 @@ Event.belongsTo(User, {
 //   foreignKey: "event_id",
 // });
 
-Tag.belongsTo(Event, {
-  foreignKey: "tag_id",
-  onDelete: "SET NULL"
+
+Tag.belongsToMany(Event, {
+  through: EventTags,
+  as: 'tagged_events',
+  foreignKey: 'tag_id',
+  onDelete: 'SET NULL'
 })
 
-Event.hasMany(Tag, {
-  foreignKey: "tag_id"
+Event.belongsToMany(Tag, {
+  through: EventTags,
+  as: 'tagged_events',
+  foreignKey: 'event_id',
+  onDelete: 'SET NULL'
 })
 
-module.exports = { User, Event, Tag
+
+module.exports = { User, Event, Tag, EventTags
   //  Comment
    };
