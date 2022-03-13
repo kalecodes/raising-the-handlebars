@@ -3,12 +3,10 @@ const { Event, EventTags, Tag, User } = require('../models')
 // Import custom middleware
 // const withAuth = require('../utils/auth');
 
-// get limited amount of events (no auth require)
-router.get('/', (req, res) => {
+
+// get all events (use custom middleware before allowing user to access all)
+router.get('/', withAuth, (req, res) => {
     Event.findAll({
-        where: {
-            id: [1,2,3]
-        },
         attributes: [
             'id',
             'name',
@@ -39,12 +37,12 @@ router.get('/', (req, res) => {
         if (!dbEventData) {
             res.status(404).json({ message: 'No events found'})
         }
-        // res.json(dbEventData);
+        res.json(dbEventData);
         const events = dbEventData.map(event => event.get({ plain: true }));
-        res.render('homepage', {
-            events,
+        // res.render('homepage', {
+        //     events,
         //     loggedIn: req.session.loggedIn
-        });
+        // });
     })
     .catch(err => {
         console.log(err);
@@ -52,14 +50,5 @@ router.get('/', (req, res) => {
     });
 });
 
-// render login page when link is clicked
-router.get('/login', (req, res) => {
-    if (req.session.loggedIn) {
-        res.redirect('/')
-        return;
-    }
-
-    res.render('login')
-});
 
 module.exports = router;
