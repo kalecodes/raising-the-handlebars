@@ -1,7 +1,6 @@
 const router = require('express').Router();
 const { Event, EventTags, Tag, User } = require('../models')
-// Import custom middleware
-// const withAuth = require('../utils/auth');
+
 
 // get limited amount of events (no auth require)
 router.get('/', (req, res) => {
@@ -42,8 +41,7 @@ router.get('/', (req, res) => {
         // res.json(dbEventData);
         const events = dbEventData.map(event => event.get({ plain: true }));
         res.render('homepage', {
-            events,
-        //     loggedIn: req.session.loggedIn
+            events
         });
     })
     .catch(err => {
@@ -55,7 +53,7 @@ router.get('/', (req, res) => {
 // render login page when link is clicked
 router.get('/login', (req, res) => {
     if (req.session.loggedIn) {
-        res.redirect('/')
+        res.redirect('/dashboard')
         return;
     }
 
