@@ -25,33 +25,34 @@ router.post('/', (req, res) => {
 
 
 // login
-router.post('/login', (req, res) => {
-    User.findOne({
-        where: {
-            email: req.body.email
-        }
-    })
-    .then(dbUserData => {
+router.post('/login', async (req, res) => {
+    try {
+        const dbUserData = await User.findOne({
+            where: {
+                email: req.body.email
+            }
+        })
+
         if (!dbUserData) {
             res.status(400).json({ message: 'No user with that email address!'});
             return;
         }
 
-        // const validPassword = dbUserData.checkPassword(req.body.password);
+        const validPassword = await dbUserData.checkPassword(req.body.password);
 
-        // if (!validPassword) {
-        //     res.status(400).json({ message: 'Incorrect password!' });
-        //     return;
-        // }
+        if (!validPassword) {
+            res.status(400).json({ message: 'Incorrect password!'});
+            return;
+        }
 
         req.session.save(() => {
-            req.session.user_id = dbUserData.id;
-            req.session.username = dbUserData.username;
-            req.session.loggedIn = true;
-
-            res.json({ user: dbUserData, messaage: 'You are now loggin in!'})
+            req.session.logginIn = true;
+            res.starus(200).json({ user: dbUserData, message: 'You are now loggin in! '})
         });
-    });
+    } catch (err) {
+        console.log(err);
+        res.status(500).json(err)
+    }
 });
 
 

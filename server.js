@@ -36,7 +36,7 @@ app.set('view engine', 'handlebars');
 
 // express middleware
 app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
+app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'Public')));
 
 app.use(routes)
