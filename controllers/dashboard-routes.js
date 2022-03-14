@@ -37,7 +37,6 @@ router.get('/', withAuth, (req, res) => {
         if (!dbEventData) {
             res.status(404).json({ message: 'No events found'})
         }
-        res.json(dbEventData);
         const events = dbEventData.map(event => event.get({ plain: true }));
         res.render('dashboard', {
             events,
