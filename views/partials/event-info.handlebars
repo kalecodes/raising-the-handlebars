@@ -1,0 +1,18 @@
+<article class="post">
+  <div class="title">
+    <a href="/events/{{id}}" target="_blank">{{name}}</a>
+  </div>
+  <div class="meta">
+    <p>Where: {{ location }}</p>
+    <p>What: {{ description }}</p>
+    <p>When: {{ date }} </p>
+    <p> Posted by: {{ user.username }} </p>
+    <ul> Tags:
+      {{#each tags as |tag|}}
+      <li>
+        {{tag_title}}
+      </li>
+      {{/each}}
+    </ul>
+  </div>
+</article>

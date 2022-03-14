@@ -4,17 +4,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Just Tech News</title>
+  <title>Raising the Handlebars</title>
   <link rel="stylesheet" href="/stylesheets/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
 </head>
 
 <body>
   <div class="wrapper">
     <header>
       <h1>
-        <a href="/">Raising the Handlebars</Handlebars></a>
+        <a href="/">Raising the Handlebars</a>
       </h1>
+      <nav>
+        {{#if loggedIn}}
+        <a href="/dashboard">Dashboard</a>
+        <button id="logout" class="btn-no-style">Logout</button>
+        {{else}}
+        <a href="/login">Login to view and post events</a>
+        {{/if}}
+      </nav>
     </header>
+    <br>
     <main>
       {{{ body }}}
     </main>
@@ -22,7 +32,10 @@
       Thanks for visiting!
     </footer>
   </div>
-
+  
+  {{#if loggedIn}}
+  <script src="/javascript/logout.js"></script>
+  {{/if}}
 </body>
 
-</html>End of code snippet
+</html>
