@@ -65,7 +65,7 @@ router.get('/:id', (req, res) => {
         const event = dbEventData.map(event => event.get({ plain: true }))
         res.render('dashboard', {
             event, 
-            loggedIn: req.session.logginIn
+            loggedIn: req.session.loggedIn
         })
     })
     .catch(err => {
