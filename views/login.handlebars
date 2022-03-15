@@ -1,32 +1,72 @@
-<form class="login-form">
-  <div>
-    <label for="email-login">email:</label>
-    <input type="text" id="email-login" />
-  </div>
-  <div>
-    <label for="password-login">password:</label>
-    <input type="password" id="password-login" />
-  </div>
-  <div>
-    <button type="submit">login</button>
-  </div>
-</form>
+ <section class="hero is-primary is-centered is-full">
+        {{!-- <div class="hero-body">
+    <p class="title is-1 is-centered is-primary">Raising The Handlebars.js</title></p>
+            <p class="subtitle is-2 is-centered">A Socialite's Site</p>
+            <p class="subtitle is-3 is-centered">...to finally getting out</p>
+            <p class="subtititle is-2 is-centered">In A Post-COVID World</p>
+            
+        </div> --}}
+    </div>
+    </section>
+  
+{{!-- <img src="Public\images\rth-logo.jpeg" alt="website logo"> --}}
+  
+  <form class="login-form column is-6 is-offset-1 box">
+         <h3 class="title has-text-white">Login</h3>
+    <hr class="login-hr">
+    <p class="subtitle has-text-primary">Please login to see cool events!</p>
+        <div>
+            
+          <label for="email-login"> <strong>Email</strong></label>
+          <input type="text" id="email-login" placeholder="email@email.com" />
+         
+        </div>
+        <div>
+          <label for="password-login"><strong>Password</strong></label>
+          <input type="password" id="password-login" placeholder="password123" />
+        </div>
+        <div>
+           <input type="checkbox">
+            Remember me
+        </input>
+        </div>
+        <div>
+          <button type="submit" class="button is-primary">login</button>
+        </div>
+        <div>
+            <p class="login-extra">
+                <a href="">Sign Up</a> &nbsp;·&nbsp;
+                <a href="">Forgot Password</a> &nbsp;·&nbsp;
+                <a href="">Need Help?</a>
+              </p>
+              <label class="checkbox" style="margin: 20px;">
+ 
 
-<form class="signup-form">
-  <div>
-    <label for="username-signup">username:</label>
+        </div>
+      </form>
+
+      <form class="signup-form box ">
+        
+  <div >
+    <label for="username-signup"> <strong>Username:</strong></label>
     <input type="text" id="username-signup" />
   </div>
   <div>
-    <label for="email-signup">email:</label>
+    <label for="email-signup"><strong> Email</strong></label>
     <input type="text" id="email-signup" />
   </div>
   <div>
-    <label for="password-signup">password:</label>
+    <label for="password-signup"> <strong>Password</strong></label>
     <input type="password" id="password-signup" />
+    <div>
+    <p class="subtitle has-text-primary">Sign up to see amazing and safety checked events! 👍👍👍</p>
+  </div>
   </div>
   <div>
-    <button type="submit">signup</button>
+    <p  Sign up to see amazing and safety checked events! 👍👍👍 </p>
+  </div>
+  <div>
+    <button type="submit" class="button is-primary">signup</button>
   </div>
 </form>
 

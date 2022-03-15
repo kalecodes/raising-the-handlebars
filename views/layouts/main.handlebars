@@ -12,6 +12,7 @@
 </head>
 
 <body>
+<<<<<<< HEAD
   <section class="hero is-small is-primary">
   <div class="hero-body">
     <p class="title">
@@ -38,6 +39,31 @@
             {{#if loggedIn}}
         
         <a class="button is-primary"></a><a href="/dashboard">Dashboard</a>
+=======
+   <section class="hero is-small is-primary">
+  <div class="hero-body">
+    <p class="title">
+      Small hero
+    </p>
+    <p class="subtitle">
+      Small subtitle
+    </p>
+  </div>
+</section>
+  <section class="hero is-primary is-medium"></section>
+  <div class="navbar">
+  <div class="container">
+    <div class="navbar-brand"
+    <a class="navbar-item"></a>
+    {{!-- <img src="Public/images/RTHLogo2.png" alt="Logo"> --}}
+     <header>
+      <h1 class="title">
+        <a href="/">Raising the Handlebars.js</a>
+      </h1>
+      <nav>
+        {{#if loggedIn}}
+        <a href="/dashboard">Dashboard</a>
+>>>>>>> feature/style
         <button id="logout" class="btn-no-style">Logout</button>
         {{else}}
         <a class="navbar-burger" data-target="navbarMenuHeroA">
@@ -56,7 +82,13 @@
     <main>
       {{{ body }}}
     </main>
+<<<<<<< HEAD
     
+=======
+    <footer>
+      {{!-- Thanks for visiting! --}}
+    </footer>
+>>>>>>> feature/style
   </div>
   
   {{#if loggedIn}}
