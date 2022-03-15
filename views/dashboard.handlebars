@@ -1,13 +1,40 @@
-<div>Welcome to your event dashboard</div>
+{{!-- <div> <h1><strong>Welcome to your event dashboard</strong> </h1></div> --}}
+<aside>
+  <div class="message is-info">
+  Hi, {{ user_id }}, welcome to Handle.
+  <br>
+  Click <button>here</button> to add a new event.
+  <br>
+  <img src=""
+  <div>
+    Select a guideline tag below to view related events:
+    {{#each tags as |tag|}}
+    <div>
+    {{> tags-info tag }}
+    </div>
+    {{/each}}
+  </div>
+  </div class="message is-info">
+</aside>
 <br>
-<section class="post-list">
+
+<article class="message is-link">
+  <div class="message-header">
+    
+  
+  </div>
+  <div class="message-body is-alert">
+ 
+<section class="post-list"> 
   {{#each events as |event|}}
   <div>
     {{> event-info event }}
   </div>
   {{/each}}
-</section>
-<aside>
+</section> 
+</div>
+</article>
+{{!-- <aside>
   Hi, {{ user_id }}, welcome to Handle.
   <br>
   Click <button>here</button> to add a new event.
@@ -20,4 +47,4 @@
     </div>
     {{/each}}
   </div>
-</aside>
+</aside> --}}

@@ -20,13 +20,10 @@ Event.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-<<<<<<< HEAD
-=======
     description: {
       type: DataTypes.STRING,
       allowNull: false,
     },
->>>>>>> refs/remotes/origin/develop
     date: {
       type: DataTypes.STRING,
       allowNull: false,

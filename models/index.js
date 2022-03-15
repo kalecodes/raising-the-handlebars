@@ -1,13 +1,9 @@
 // Import models
 const User = require("./User");
 const Event = require("./Event");
-<<<<<<< HEAD
-const Comment = require("./Comment");
-=======
 // const Comment = require("./Comment");
 const Tag = require("./Tag");
 const EventTags = require("./EventTags")
->>>>>>> refs/remotes/origin/develop
 
 // Create associations
 User.hasMany(Event, {
@@ -19,28 +15,6 @@ Event.belongsTo(User, {
   onDelete: "SET NULL",
 });
 
-<<<<<<< HEAD
-Comment.belongsTo(User, {
-  foreignKey: "user_id",
-  onDelete: "SET NULL",
-});
-
-User.hasMany(Comment, {
-  foreignKey: "user_id",
-  onDelete: "SET NULL",
-});
-
-Comment.belongsTo(Event, {
-  foreignKey: "event_id",
-  onDelete: "SET NULL",
-});
-
-Event.hasMany(Comment, {
-  foreignKey: "event_id",
-});
-
-module.exports = { User, Event, Comment };
-=======
 // Comment.belongsTo(User, {
 //   foreignKey: "user_id",
 //   onDelete: "SET NULL",
@@ -79,4 +53,3 @@ Event.belongsToMany(Tag, {
 module.exports = { User, Event, Tag, EventTags
   //  Comment
    };
->>>>>>> refs/remotes/origin/develop
