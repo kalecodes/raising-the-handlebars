@@ -48,13 +48,24 @@ router.get("/login", (req, res) => {
 });
 
 router.get("/add-event", (req, res) => {
-  if (req.session.loggedIn) {
-    res.render("add-event", {
-      loggedIn: req.session.loggedIn
-    });
-    return;
-  }
-  res.redirect("/login");
+  Tag.findAll({
+
+  })
+  .then((dbTagData) => {
+    if (req.session.loggedIn) {
+      if (!dbTagData) {
+        res.status(404).json({ message: 'No tags found'})
+      }
+      const tags = dbTagData.map(tag => tag.get({ plain: true }));
+      res.render("add-event", {
+        tags,
+        loggedIn: req.session.loggedIn
+      });
+      return;
+    }
+    res.redirect("/login");
+  })
+
 });
 
 module.exports = router;
