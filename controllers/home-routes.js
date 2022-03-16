@@ -49,10 +49,12 @@ router.get("/login", (req, res) => {
 
 router.get("/add-event", (req, res) => {
   if (req.session.loggedIn) {
-    res.render("add-event");
+    res.render("add-event", {
+      loggedIn: req.session.loggedIn
+    });
     return;
   }
-  res.redirect("login");
+  res.redirect("/login");
 });
 
 module.exports = router;
