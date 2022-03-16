@@ -12,6 +12,8 @@ const helpers = require("./utils/helpers");
 const app = express();
 const PORT = process.env.PORT || 3001;
 
+process.env.SESS_SECRET = 'secret secret secret';
+
 const sess = {
   secret: process.env.SESS_SECRET,
   cookie: {},
