@@ -47,9 +47,11 @@ router.get('/:id', (req, res) => {
         }
         // res.json(dbTagData)
         const events = dbTagData.tags.map(tag => tag.get({ plain: true }));
-        console.log(events)
+        // console.log(events)
+        const user = req.session.username
         res.render('dashboard', {
             events,
+            user,
             loggedIn: req.session.loggedIn
         });
     })
