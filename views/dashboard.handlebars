@@ -1,50 +1,34 @@
-{{!-- <div> <h1><strong>Welcome to your event dashboard</strong> </h1></div> --}}
-<aside>
-  <div class="message is-info">
-  Hi, {{ user_id }}, welcome to Handle.
-  <br>
-  Click <button>here</button> to add a new event.
-  <br>
-  <img src=""
-  <div>
-    Select a guideline tag below to view related events:
-    {{#each tags as |tag|}}
-    <div>
-    {{> tags-info tag }}
-    </div>
-    {{/each}}
-  </div>
-  </div class="message is-info">
-</aside>
-<br>
+
+
 
 <article class="message is-link">
   <div class="message-header">
-    
-  
+    <div><h1><strong>Welcome to your event <a href="/dashboard">dashboard</a></strong></h1></div>
   </div>
   <div class="message-body is-alert">
- 
-<section class="post-list"> 
-  {{#each events as |event|}}
-  <div>
-    {{> event-info event }}
+    <section class="post-list"> 
+      {{#each events as |event|}}
+      <div>
+        {{> event-info event }}
+      </div>
+      {{/each}}
+    </section> 
   </div>
-  {{/each}}
-</section> 
-</div>
 </article>
+
 <aside>
-  Hi, exampleuser, welcome to Handle!
-  <br>
-  <a href="/add-event">Click here to add an event!</a>
-  <br>
-  <div>
-    Select a guideline tag below to view related events:
-    {{#each tags as |tag|}}
+  <div class="message is-info">
+    Hi, {{ user_id }}, welcome to Handle.
+    <br>
+    <a href="/add-event">Click <button>here</button> to add a new event.</a>
+    <br>
     <div>
-    {{> tags-info tag }}
+      Select a guideline tag below to view related events:
+      {{#each tags as |tag|}}
+      <div>
+      {{> tags-info tag }}
+      </div>
+      {{/each}}
     </div>
-    {{/each}}
-  </div>
+  </div class="message is-info">
 </aside>
