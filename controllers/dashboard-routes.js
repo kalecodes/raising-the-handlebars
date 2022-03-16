@@ -7,6 +7,9 @@ const withAuth = require('../utils/auth');
 // get all events (use custom middleware before allowing user to access all)
 router.get('/', withAuth, (req, res) => {
     Event.findAll({
+        order: [
+            ['id', 'DESC']
+        ],
         attributes: [
             'id',
             'name',
