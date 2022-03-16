@@ -56,8 +56,4 @@ module.exports = {
   Tag,
   EventTags
   //  Comment
-<<<<<<< HEAD
 };
-=======
-   };
->>>>>>> feature/style

@@ -1,125 +1,75 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Raising the Handlebars</title>
-  <link rel="stylesheet" href="/stylesheets/style.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+  <link rel="stylesheet" href="/css/style.css">
 
 
 </head>
 
 <body>
-<<<<<<< HEAD
-  <section class="hero is-small is-primary">
-  <div class="hero-body">
-    <p class="title">
-      Rasing  the Handlebars.js
-    </p>
-    <p class="subtitle">
-      ...getting out in Post-covid WORLD
-    </p>
-  </div>
-</section>
-    <!-- Hero head: will stick to top -->
-    <section class="hero is-primary is-medium"></section>
-    <div class="navbar">
-      <div class="container">
-        <div class="navbar-brand">
-          <a class="navbar-item">
+  <div class="app-wrapper">
+    <div class="app-content">
 
-          </a>
-        </div>
-        
-      
 
-      
+      <section class="hero is-small is-primary">
+        <div class="hero-body nav-wrapper">
+          <div>
+
+            <p class="title">
+
+              Raising the Handlebars.js
+            </p>
+            <p class="subtitle">
+              ...getting out in Post-covid WORLD
+            </p>
+          </div>
+          <div>
+
             {{#if loggedIn}}
-        
-        <a class="button is-primary"></a><a href="/dashboard">Dashboard</a>
-=======
-   <section class="hero is-small is-primary">
-  <div class="hero-body">
-    <p class="title">
-      Small hero
-    </p>
-    <p class="subtitle">
-      Small subtitle
-    </p>
-  </div>
-</section>
-  <section class="hero is-primary is-medium"></section>
-  <div class="navbar">
-  <div class="container">
-    <div class="navbar-brand"
-    <a class="navbar-item"></a>
-    {{!-- <img src="Public/images/RTHLogo2.png" alt="Logo"> --}}
-     <header>
-      <h1 class="title">
-        <a href="/">Raising the Handlebars.js</a>
-      </h1>
-      <nav>
-        {{#if loggedIn}}
-        <a href="/dashboard">Dashboard</a>
->>>>>>> feature/style
-        <button id="logout" class="btn-no-style">Logout</button>
-        {{else}}
-        <a class="navbar-burger" data-target="navbarMenuHeroA">
-        <a href="/login">Login to view and post events</a></a>
-        {{/if}}
-            
-            
-          
-              <!-- <a class="navbar-item is-active">
-                Login
-              </a> -->
-         
-       
-  
 
-    <main>
-      {{{ body }}}
-    </main>
-<<<<<<< HEAD
-    
-=======
-    <footer>
-      {{!-- Thanks for visiting! --}}
-    </footer>
->>>>>>> feature/style
-  </div>
-  
-  {{#if loggedIn}}
-  <script src="/javascript/logout.js"></script>
-  {{/if}}
+
+            <a class="button is-primary"></a><a href="/dashboard">Dashboard</a>
+            <button id="logout" class="btn-no-style">Logout</button>
+            {{else}}
+            <a class="navbar-burger" data-target="navbarMenuHeroA">
+              <a href="/login">Login to view and post events</a></a>
+            {{/if}}
+          </div>
+        </div>
+      </section>
+
+
+
+
+      <main>
+        {{{ body }}}
+      </main>
+
+
+      {{#if loggedIn}}
+      <script src="/javascript/logout.js"></script>
+      {{/if}}
       <!--<div class="card">
   <div class="card-image"> -->
-    <!--<div class="container is-fluid">
+      <!--<div class="container is-fluid">
   <div class="notification is-primary">
     This container is <strong>fluid</strong>: it will have a 32px gap on either side, on any
     viewport size.
     </div>
     </div> -->
-    
-      </div>
-      
-      </div>
-    </div>
 
-    <div class="content">
-      
-      
-      
-    </div>
-  </div>
-</div>
-</div>
-</div>
 
-<!-- columns for cards -->
-<div class="columns">
+
+
+
+
+      <!-- columns for cards -->
+      <!-- <div class="columns">
   <div class="column">
     First column
   </div>
@@ -136,20 +86,21 @@
     <div class="columns">
   <div class="column">
     <div class="notification">
-      <p class=" is-size-5"></p>
-     
-     
-  
-</section>
-<footer class="footer">
-  <div class="content has-text-centered">
-    <p>
-      <strong>Thanks for visiting!</strong>  
-      
+      <p class=" is-size-5"></p> -->
+
+
+
+    </div>
+    <footer class="footer">
+      <div class="content has-text-centered">
+        <p>
+          <strong>Thanks for visiting!</strong>
+
+      </div>
+    </footer>
   </div>
-</footer>
 
 </body>
 
 
-</html> 
+</html>
