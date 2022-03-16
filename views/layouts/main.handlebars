@@ -7,100 +7,54 @@
   <title>Raising the Handlebars</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
   <link rel="stylesheet" href="/css/style.css">
-
-
 </head>
 
 <body>
   <div class="app-wrapper">
     <div class="app-content">
 
-
-      <section class="hero is-small is-primary">
+      <header class="hero is-small is-primary">
         <div class="hero-body nav-wrapper">
           <div>
-
-            <p class="title">
-
-              Raising the Handlebars.js
-            </p>
+            <h1 class="title">
+              <a link="/">Handle</a>
+            </h1>
             <p class="subtitle">
-              ...getting out in Post-covid WORLD
+              ...for getting out in a post-COVID world.
             </p>
           </div>
           <div>
-
             {{#if loggedIn}}
-
-
-            <a class="button is-primary"></a><a href="/dashboard">Dashboard</a>
+            {{!-- <a class="button is-primary"></a><a href="/dashboard">Dashboard</a> --}}
             <button id="logout" class="btn-no-style">Logout</button>
             {{else}}
-            <a class="navbar-burger" data-target="navbarMenuHeroA">
-              <a href="/login">Login to view and post events</a></a>
+            {{!-- <a class="navbar-burger" data-target="navbarMenuHeroA"> --}}
+            <a href="/login"><button>Login</button> to view and post events</a>
             {{/if}}
           </div>
         </div>
-      </section>
-
-
-
+      </header>
 
       <main>
         {{{ body }}}
       </main>
-
-
-      {{#if loggedIn}}
-      <script src="/javascript/logout.js"></script>
-      {{/if}}
-      <!--<div class="card">
-  <div class="card-image"> -->
-      <!--<div class="container is-fluid">
-  <div class="notification is-primary">
-    This container is <strong>fluid</strong>: it will have a 32px gap on either side, on any
-    viewport size.
+      
     </div>
-    </div> -->
-
-
-
-
-
-
-      <!-- columns for cards -->
-      <!-- <div class="columns">
-  <div class="column">
-    First column
-  </div>
-  <div class="column">
-    Second column
-  </div>
-  <div class="column">
-    Third column
-  </div>
-
-</section>
-<section class="section">
-  <div class="container">
-    <div class="columns">
-  <div class="column">
-    <div class="notification">
-      <p class=" is-size-5"></p> -->
-
-
-
-    </div>
+    
     <footer class="footer">
       <div class="content has-text-centered">
         <p>
           <strong>Thanks for visiting!</strong>
-
+        </p>
       </div>
     </footer>
   </div>
 
-</body>
 
+
+  {{#if loggedIn}}
+  <script src="/javascript/logout.js"></script>
+  {{/if}}
+</body>
 
 </html>
