@@ -3,7 +3,22 @@ html, body {
 }
 
 body {
-    background: black;
+    background: #F0803C;
+}
+
+.message.is-link {
+    background-color: #F0803C;
+    color: #F1EFE4;
+}
+
+.message.is-link .message-header {
+    background-color: #F0803C;
+    font-size: 1.25rem;
+}
+
+.hero.is-primary {
+    background-color: #50858B;
+    color: #F1EFE4;
 }
 
 .nav-wrapper {
@@ -12,10 +27,11 @@ body {
 }
 
 .post-list {
-    background: black;
-    color: white;
+    border: none;
     font-size: 1.5rem;
-    padding: 1rem;
+    padding: 2rem;
+    padding-top: 0rem;
+    padding-bottom: 1rem;
 }
 
 .footer {
@@ -31,6 +47,28 @@ min-height: 100vh;
 
 .app-content {
     flex-grow: 1;
+}
+
+.event-card {
+    background-color: #F1EFE4;
+    color: #32292F;
+    margin: 2rem;
+    padding: 1.5rem;
+    border-radius: 1rem;
+}
+
+.aside {
+    margin-right: 2rem;
+    margin-top: 5rem;
+    padding: 1rem;
+    background-color: #F1EFE4;
+    color: #32292F;
+    border-radius: 1rem;
+    font-size: 1.5rem;
+}
+
+.tag-button {
+    font-size: 1.25rem;
 }
 
 .login-card {
@@ -53,3 +91,10 @@ text-align: center;
     width: 245px;
 }
 
+.footer {
+    background-color: #50858B;
+}
+
+.content h2 {
+    color: #F1EFE4;
+}
