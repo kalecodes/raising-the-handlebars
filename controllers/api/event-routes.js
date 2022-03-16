@@ -8,7 +8,7 @@ router.post('/', (req, res) => {
         name: req.body.name,
         location: req.body.location,
         description: req.body.description,
-        data: req.body.date,
+        date: req.body.date,
         user_id: req.session.user_id
         // tags: 
     })
