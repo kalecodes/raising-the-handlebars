@@ -12,7 +12,7 @@ const helpers = require("./utils/helpers");
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-process.env.SESS_SECRET = 'secret secret secret';
+process.env.SESS_SECRET = ' ';
 
 const sess = {
   secret: process.env.SESS_SECRET,

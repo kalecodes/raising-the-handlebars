@@ -49,9 +49,11 @@ router.get('/', withAuth, (req, res) => {
                 res.status(404).json({ message: 'No events found'})
             }
             const events = dbEventData.map(event => event.get({ plain: true }));
+            const user = process.env.SESS_SECRET
             res.render('dashboard', {
                 tags,
                 events,
+                user,
                 loggedIn: req.session.loggedIn
             })
         })
