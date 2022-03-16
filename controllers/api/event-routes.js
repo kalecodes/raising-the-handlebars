@@ -64,8 +64,10 @@ router.get('/:id', withAuth, (req, res) => {
             res.status(404).json({ message: 'No events found'})
         }
         const event = dbEventData.get({ plain: true });
+        const user = req.session.username
         res.render('event', {
             event, 
+            user,
             loggedIn: req.session.loggedIn
         })
     })
