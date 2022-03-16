@@ -6,6 +6,10 @@ body {
     background: #F0803C;
 }
 
+.title {
+    font-size: 3rem;
+}
+
 .message.is-link {
     background-color: #F0803C;
     color: #F1EFE4;
