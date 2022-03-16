@@ -1,0 +1,27 @@
+
+
+<section class="columns">
+  <article class="message is-link column is-9">
+    <div class="message-header">
+      <div><h1><strong>Welcome to the event details page!</a></strong></h1></div>
+    </div>
+    
+    <section class="post-list"> 
+      <div class="event-card">
+        {{> event-info event }}
+      </div>
+    </section> 
+  </article>
+
+  <aside class="message is-link column is-3">
+    <div class="aside">
+      Hi, {{ username }}, welcome to Handle.
+      <br>
+      <br>
+      <a href="/add-event">Add a new event.</a>
+      <br>
+      <br>
+      <a href="/dashboard">Return to the Dashboard</a>
+    </div>
+  </aside>
+</section>

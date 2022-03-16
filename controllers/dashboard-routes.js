@@ -33,7 +33,7 @@ router.get('/', withAuth, (req, res) => {
             }
         ]
     })
-    .then((dbEventData) =>{
+    .then((dbEventData) => {
         Tag.findAll({
             attributes: [
                 'id',
