@@ -30,5 +30,8 @@
   "bugs": {
     "url": "https://github.com/kalecodes/raising-the-handlebars/issues"
   },
-  "homepage": "https://github.com/kalecodes/raising-the-handlebars#readme"
+  "homepage": "https://github.com/kalecodes/raising-the-handlebars#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
 }

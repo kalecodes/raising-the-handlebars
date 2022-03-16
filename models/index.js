@@ -50,6 +50,10 @@ Event.belongsToMany(Tag, {
 })
 
 
-module.exports = { User, Event, Tag, EventTags
+module.exports = {
+  User,
+  Event,
+  Tag,
+  EventTags
   //  Comment
-   };
+};
