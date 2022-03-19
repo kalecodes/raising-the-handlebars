@@ -99,6 +99,12 @@ min-height: 100vh;
 
 .footer {
     background-color: #50858B;
+    postion: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    text-align: center;
 }
 
 .content h2 {
