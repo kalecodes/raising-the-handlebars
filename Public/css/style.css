@@ -21,7 +21,7 @@ body {
 }
 
 .hero.is-primary {
-    background-color: #50858B;
+    background-color: #F0803C;
     color: #F1EFE4;
 }
 
@@ -98,8 +98,8 @@ min-height: 100vh;
 }
 
 .footer {
-    background-color: #50858B;
-    postion: fixed;
+    background-color: #F0803C;
+    position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
