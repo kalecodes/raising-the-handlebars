@@ -1,13 +1,13 @@
 <article class="post">
   <div class="title">
-    <a href="/events/{{id}}" target="_blank">{{name}}</a>
+    <a href="/api/events/{{id}}">{{name}}</a>
   </div>
   <div class="meta">
-    <p>Where: {{ location }}</p>
-    <p>What: {{ description }}</p>
-    <p>When: {{ date }} </p>
-    <p> Posted by: {{ user.username }} </p>
-    <ul> Tags:
+    <p><strong>Where:</strong> {{ location }}</p>
+    <p><strong>What:</strong> {{ description }}</p>
+    <p><strong>When:</strong> {{ date }} </p>
+    <p><strong>Posted by:</strong> {{ user.username }} </p>
+    <ul><strong>Tags:</strong>
       {{#each tags as |tag|}}
       <li>
         {{tag_title}}

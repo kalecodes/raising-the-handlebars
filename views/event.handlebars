@@ -3,15 +3,13 @@
 <section class="columns">
   <article class="message is-link column is-9">
     <div class="message-header">
-      <div><h1><strong>Welcome to your event <a href="/dashboard">dashboard</a></strong></h1></div>
+      <div><h1><strong>Welcome to the event details page!</a></strong></h1></div>
     </div>
     
     <section class="post-list"> 
-      {{#each events as |event|}}
       <div class="event-card">
         {{> event-info event }}
       </div>
-      {{/each}}
     </section> 
   </article>
 
@@ -19,20 +17,11 @@
     <div class="aside">
       Hi, {{ user }}, welcome to Handle.
       <br>
+      <br>
       <a href="/add-event">Add a new event.</a>
       <br>
       <br>
-      <div>
-        Select a tag below to view related events:
-        {{#each tags as |tag|}}
-        <div>
-        {{> tags-info tag }}
-        </div>
-        {{/each}}
-      </div>
-      <br>
-      <br>
-      <a href="/dashboard">Refresh the Dashboard</a>
+      <a href="/dashboard">Return to the Dashboard</a>
     </div>
   </aside>
 </section>

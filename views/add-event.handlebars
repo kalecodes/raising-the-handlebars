@@ -1,23 +1,27 @@
+<br>
 <section>
-    <form class="new-event-form">
-        <div>
-            <h1>Add Event</h1>
-            <p>Please fill in the form below with event information</p>
-                <label for="event-title">Title</label><br>
-                <input type="text" id="event-title" name="event-title" required><br>
-                
-                <label for="event-location">Location</label><br>
-                <input type="text" id="event-location" name="event-location" required><br>
+    <div class="login-wrapper">
+        <form class="new-event-form login-card login-form column is-6 box">
+            <h3 class="title">Add Event</h3>
+            <hr class="login-hr">
+            <p class="subtitle has-text-primary">Please fill in the form below with event information</p>
+            <div>
+                    <label for="event-title">Title</label><br>
+                    <input type="text" id="event-title" name="event-title" required><br>
+                    
+                    <label for="event-location">Location</label><br>
+                    <input type="text" id="event-location" name="event-location" required><br>
 
-                <label for="event-description">Event Description</label><br>
-                <textarea rows="4" cols="50" id="event-description" name="event-description"></textarea><br>
+                    <label for="event-description">Event Description</label><br>
+                    <textarea rows="4" cols="50" id="event-description" name="event-description"></textarea><br>
 
-                <label for="event-date">Date</label><br>
-                <input type="date" id="event-date" name="event-date"><br>
+                    <label for="event-date">Date</label><br>
+                    <input type="text" id="event-date" name="event-date"><br><br>
 
-                <button type="submit">Add Event!</button><br>
-        </div>
-    </form>
+                    <button type="submit" class="button is-primary">Add Event!</button><br>
+            </div>
+        </form>
+    </div>
 </section>
 
 <script src="/javascript/add-event.js"></script>

@@ -1,33 +1,55 @@
-<form class="login-form">
-  <div>
-    <label for="email-login">email:</label>
-    <input type="text" id="email-login" />
-  </div>
-  <div>
-    <label for="password-login">password:</label>
-    <input type="password" id="password-login" />
-  </div>
-  <div>
-    <button type="submit">login</button>
-  </div>
-</form>
+<br>
+<div class="login-wrapper">
+  <form class="login-card login-form column is-6 box">
+    <h3 class="title">Login</h3>
+    <hr class="login-hr">
+    <p class="subtitle has-text-primary">Please login to view and post events!</p>
+    <div class="login-input-wrapper">
+      <div>
 
-<form class="signup-form">
-  <div>
-    <label for="username-signup">username:</label>
-    <input type="text" id="username-signup" />
-  </div>
-  <div>
-    <label for="email-signup">email:</label>
-    <input type="text" id="email-signup" />
-  </div>
-  <div>
-    <label for="password-signup">password:</label>
-    <input type="password" id="password-signup" />
-  </div>
-  <div>
-    <button type="submit">signup</button>
-  </div>
-</form>
+        <label for="email-login"> <strong>Email</strong></label>
+        <input type="text" id="email-login" placeholder="email@email.com" />
+
+      </div>
+      <div>
+        <label for="password-login"><strong>Password</strong></label>
+        <input type="password" id="password-login" placeholder="password123" />
+      </div>
+    </div>
+    <br>
+    <div>
+      <button type="submit" class="button is-primary">login</button>
+    </div>
+    <br>
+  </form>
+
+
+  <form class="login-card login-form column is-6 box ">
+    <h3 class="title">Sign Up</h3>
+    <hr class="login-hr">
+    <p class="subtitle has-text-primary">Please create an account to view and post events!</p>
+    
+    <div class="login-input-wrapper">
+      <div>
+        <label for="username-signup"> <strong>Username</strong></label>
+        <input type="text" id="username-signup" placeholder="user" />
+      </div>
+      <div>
+        <label for="email-signup"> <strong>Email</strong></label>
+        <input type="text" id="email-signup" placeholder="email@email.com" />
+      </div>
+      <div>
+        <label for="password-signup"><strong>Password</strong></label>
+        <input type="password" id="password-signup" placeholder="password123" />
+      </div>
+    </div>
+    <br>
+    <div>
+      <button type="submit" class="button is-primary">sign up</button>
+    </div>
+    <br>
+  </form>
+</div>
+<br>
 
 <script src="/javascript/login.js"></script>

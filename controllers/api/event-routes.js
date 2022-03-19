@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const { Event, User, Tag, EventTags } = require('../../models');
+const withAuth = require('../../utils/auth')
 
 // Create a new event 
 router.post('/', (req, res) => {
@@ -7,7 +8,7 @@ router.post('/', (req, res) => {
         name: req.body.name,
         location: req.body.location,
         description: req.body.description,
-        data: req.body.date,
+        date: req.body.date,
         user_id: req.session.user_id
         // tags: 
     })
@@ -27,7 +28,7 @@ router.post('/', (req, res) => {
 
 
 //get a event by id
-router.get('/:id', (req, res) => {
+router.get('/:id', withAuth, (req, res) => {
     Event.findOne({
         where: {
             id: req.params.id
@@ -62,9 +63,11 @@ router.get('/:id', (req, res) => {
         if (!dbEventData) {
             res.status(404).json({ message: 'No events found'})
         }
-        const event = dbEventData.map(event => event.get({ plain: true }))
-        res.render('dashboard', {
+        const event = dbEventData.get({ plain: true });
+        const user = req.session.username
+        res.render('event', {
             event, 
+            user,
             loggedIn: req.session.loggedIn
         })
     })

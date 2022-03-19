@@ -4,34 +4,51 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Raising the Handlebars</title>
-  <link rel="stylesheet" href="/stylesheets/style.css">
+  <title>Handle - Events</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+  <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
-  <div class="wrapper">
-    <header>
-      <h1>
-        <a href="/">Raising the Handlebars</a>
-      </h1>
-      <nav>
-        {{#if loggedIn}}
-        <a href="/dashboard">Dashboard</a>
-        <button id="logout" class="btn-no-style">Logout</button>
-        {{else}}
-        <a href="/login">Login to view and post events</a>
-        {{/if}}
-      </nav>
-    </header>
-    <br>
-    <main>
-      {{{ body }}}
-    </main>
-    <footer>
-      Thanks for visiting!
+  <div class="app-wrapper">
+    <div class="app-content">
+
+      <header class="hero is-small is-primary">
+        <div class="hero-body nav-wrapper">
+          <div>
+            <h1 class="title">
+              <a href="/">Handle</a>
+            </h1>
+            <p class="subtitle">
+              ...for getting out in a post-COVID world.
+            </p>
+          </div>
+          <div>
+            {{#if loggedIn}}
+            <button id="logout" class="tag-button">Logout</button>
+
+            {{/if}}
+          </div>
+        </div>
+      </header>
+
+      <main>
+        {{{ body }}}
+      </main>
+      
+    </div>
+    
+    <footer class="footer">
+      <div class="content has-text-centered">
+        <h2>
+          Thanks for visiting!
+        </h2>
+      </div>
     </footer>
   </div>
-  
+
+
+
   {{#if loggedIn}}
   <script src="/javascript/logout.js"></script>
   {{/if}}

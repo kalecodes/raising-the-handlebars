@@ -7,6 +7,9 @@ const withAuth = require('../utils/auth');
 // get all events (use custom middleware before allowing user to access all)
 router.get('/', withAuth, (req, res) => {
     Event.findAll({
+        order: [
+            ['id', 'DESC']
+        ],
         attributes: [
             'id',
             'name',
@@ -33,7 +36,7 @@ router.get('/', withAuth, (req, res) => {
             }
         ]
     })
-    .then((dbEventData) =>{
+    .then((dbEventData) => {
         Tag.findAll({
             attributes: [
                 'id',
@@ -49,9 +52,11 @@ router.get('/', withAuth, (req, res) => {
                 res.status(404).json({ message: 'No events found'})
             }
             const events = dbEventData.map(event => event.get({ plain: true }));
+            const user = req.session.username
             res.render('dashboard', {
                 tags,
                 events,
+                user,
                 loggedIn: req.session.loggedIn
             })
         })
