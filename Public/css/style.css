@@ -9,6 +9,7 @@ body {
 .hero {
     background-color: #F0803C;
     color: white;
+    font-style: inherit;
 }
 
 .nav-wrapper {
@@ -17,8 +18,8 @@ body {
 }
 
 .title {
-    font-size: 3rem;
-    font-color: white;
+    font-size: 4rem;
+    color: white;
 }
 
 .message.is-link {
