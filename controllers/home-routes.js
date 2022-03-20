@@ -37,15 +37,17 @@ router.get("/", (req, res) => {
     });
 });
 
-// render login page when link is clicked
-router.get("/login", (req, res) => {
+// render sign-up page when link is clicked
+router.get("/signup", (req, res) => {
   if (req.session.loggedIn) {
     res.redirect("/dashboard");
     return;
   }
 
-  res.render("login");
+  res.render("sign-up");
 });
+
+
 
 router.get("/add-event", (req, res) => {
   Tag.findAll({
