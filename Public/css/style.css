@@ -6,23 +6,10 @@ body {
     background: #F0803C;
 }
 
-.title {
-    font-size: 3rem;
-}
-
-.message.is-link {
+.hero {
     background-color: #F0803C;
-    color: #F1EFE4;
-}
-
-.message.is-link .message-header {
-    background-color: #F0803C;
-    font-size: 1.25rem;
-}
-
-.hero.is-primary {
-    background-color: #50858B;
-    color: #F1EFE4;
+    color: white;
+    font-style: inherit;
 }
 
 .nav-wrapper {
@@ -30,12 +17,64 @@ body {
     justify-content: space-between;
 }
 
+.title {
+    font-size: 4rem;
+    color: white;
+}
+
+.message.is-link {
+    background-color:#F0803C;
+    color: #F1EFE4;
+    height: %;
+    width:45%;
+}
+
+.message.is-link .message-header {
+    background-color:#F0803C;
+    font-size: 1.25rem;
+}
+
+
+
+
 .post-list {
     border: none;
-    font-size: 1.5rem;
-    padding: 2rem;
+    font-size: 8rem;
+    padding: 1.5rem;
     padding-top: 0rem;
     padding-bottom: 1rem;
+}
+
+.column {
+    float: center;
+width: 25%;
+display: inline-flex; 
+}
+
+.row-header {
+    display: flex;
+    text-align: center;
+    display: : flex;
+    padding: 30px;
+    font-size: 55px;
+}
+
+.row-content {
+    border: solid;
+    border-color: teal;
+    display: flex;
+    text-align: center;
+    height: 300px;
+    line-height: 75px;
+  padding: 50px;
+    margin: 25px;
+}
+
+.box-content {
+    background-color: #F0803C;
+    width: 550px;
+    height: 1000px;
+    align-items: center;
 }
 
 .footer {
@@ -54,7 +93,7 @@ min-height: 100vh;
 }
 
 .event-card {
-    background-color: #F1EFE4;
+    background-color:#F0803C;
     color: #32292F;
     margin: 2rem;
     padding: 1.5rem;
@@ -65,7 +104,7 @@ min-height: 100vh;
     margin-right: 2rem;
     margin-top: 5rem;
     padding: 1rem;
-    background-color: #F1EFE4;
+    background-color: #F0803C;
     color: #32292F;
     border-radius: 1rem;
     font-size: 1.5rem;
@@ -98,9 +137,15 @@ min-height: 100vh;
 }
 
 .footer {
-    background-color: #50858B;
+    background-color:#F0803C;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    text-align: center;
 }
-
-.content h2 {
+/* 
+/* .content h2 { */
     color: #F1EFE4;
-}
+} */
