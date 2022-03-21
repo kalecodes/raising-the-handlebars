@@ -5,7 +5,7 @@
   <div class="meta">
     <p><strong>Where:</strong> {{ location }}</p>
     <p><strong>What:</strong> {{ description }}</p>
-    <p><strong>When:</strong> {{ date }} </p>
+    <p><strong>When:</strong> {{format_date date}} </p>
     <p><strong>Posted by:</strong> {{ user.username }} </p>
     <ul><strong>Tags:</strong>
       {{#each tags as |tag|}}
