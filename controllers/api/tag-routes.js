@@ -14,6 +14,7 @@ router.get('/:id', (req, res) => {
             {
                 model: Event, 
                 attributes: [
+                    'id',
                     'name',
                     'location',
                     'description',

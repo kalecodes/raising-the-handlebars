@@ -37,24 +37,37 @@ router.get("/", (req, res) => {
     });
 });
 
-// render login page when link is clicked
-router.get("/login", (req, res) => {
+// render sign-up page when link is clicked
+router.get("/signup", (req, res) => {
   if (req.session.loggedIn) {
     res.redirect("/dashboard");
     return;
   }
 
-  res.render("login");
+  res.render("sign-up");
 });
 
+
+
 router.get("/add-event", (req, res) => {
-  if (req.session.loggedIn) {
-    res.render("add-event", {
-      loggedIn: req.session.loggedIn
-    });
-    return;
-  }
-  res.redirect("/login");
+  Tag.findAll({
+
+  })
+  .then((dbTagData) => {
+    if (req.session.loggedIn) {
+      if (!dbTagData) {
+        res.status(404).json({ message: 'No tags found'})
+      }
+      const tags = dbTagData.map(tag => tag.get({ plain: true }));
+      res.render("add-event", {
+        tags,
+        loggedIn: req.session.loggedIn
+      });
+      return;
+    }
+    res.redirect("/login");
+  })
+
 });
 
 module.exports = router;
