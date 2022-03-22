@@ -21,12 +21,14 @@ async function newFormHandler(event) {
     },
   });
 
+  const id = (await response.json()).id
+
   if (response.ok) {
-    document.location.replace("/dashboard/")
+    // console.log(await response.json())
+    console.log('string', id)
   } else {
     alert(response.statusText);
   }
-
 
   // return id of new event created in above post request
   const tags = [];
@@ -35,17 +37,28 @@ async function newFormHandler(event) {
     tags.push(checkedBoxes[i].value)
   }
   console.log(tags)
-  // for each tag selected 
 
-  // const response = await fetch("/api/eventtags"), {
-  // method: "POST",
-  // body: JSON.stringify({
-  // event_id,
-  // tag_id
-  // })
-  // }
-  
+  const eventID = id;
 
+  for (var i = 0; i < tags.length; i++) {
+    const tagID = tags[i]
+    const eventTag = await fetch("api/events/tags", {
+      method: "POST",
+      body: JSON.stringify({
+        eventID,
+        tagID
+      }),
+      headers: {
+        "Content-type": "application/json"
+      }
+    })
+
+    if (eventTag.ok) {
+      document.location.replace("/dashboard/")
+    } else {
+      console.log(eventTag.statusText)
+    }
+  }
 }
 
 document
