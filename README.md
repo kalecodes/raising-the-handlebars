@@ -53,8 +53,3 @@ No testing required
 ## Additional Info
 * Github Repository: [Handle - Github](https://github.com/kalecodes/raising-the-handlebars)
 * Deployed Application: [Handle - Events](https://handle-events.herokuapp.com/)
-
-
-![Picture4](https://user-images.githubusercontent.com/93722113/158687034-6cd537a9-edf8-4e70-8196-4d092d180f4a.png)
-![Picture5](https://user-images.githubusercontent.com/93722113/158687811-ed100c37-e9f1-436e-b223-e00a99e13ce0.png)
-
