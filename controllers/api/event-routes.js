@@ -22,10 +22,19 @@ router.post('/', (req, res) => {
 });
 
 // get all events
-// see dashboard-routes.js 
-    //might need to relocate to this file
-
-
+router.post('/tags', (req, res) => {
+    EventTags.create({
+        event_id: req.body.eventID,
+        tag_id: req.body.tagID
+    })
+    .then(dbEventData => {
+        res.json(dbEventData)
+    })
+    .catch(err => {
+        console.log(err)
+        res.status(500).json(err)
+    });
+});
 
 //get a event by id
 router.get('/:id', withAuth, (req, res) => {
